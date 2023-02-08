@@ -23,6 +23,14 @@ Development:
 ```bash
 docker build -t ids721-proj1 .   
 docker run --rm -p 80:80 casnz1601/ids721-proj1   
-docker tag ids721-proj1 casnz1601/ids721-proj1     
-docker push casnz1601/ids721-proj1  
+```
+
+Production (AWS EC2):
+```bash
+docker buildx build --platform linux/amd64 -t ids721-proj1 .      
+docker tag ids721-proj1 casnz1601/ids721-proj1    
+docker push casnz1601/ids721-proj1                      
+docker pull casnz1601/ids721-proj1  
+sudo docker stop $(sudo docker ps -a -q)
+sudo docker run -d --rm -p 80:80 casnz1601/ids721-proj1
 ```
