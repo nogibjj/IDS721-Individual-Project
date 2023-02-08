@@ -24,21 +24,31 @@ def weather():
 	api = os.getenv('API_KEY')
 
 	# source contain json data from api
-	source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=' + api).read()
+	try:
+		source = urllib.request.urlopen('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=' + api).read()
+	except urllib.error.HTTPError:
+		# handle 404 error
+		return render_template('404.html')
 
 	# converting JSON data to a dictionary
 	list_of_data = json.loads(source)
 
 	# data for variable list_of_data
 	data = {
-		"country_code": str(list_of_data['sys']['country']),
-		"coordinate": str(list_of_data['coord']['lon']) + ' '
-					+ str(list_of_data['coord']['lat']),
-		"temp": str(list_of_data['main']['temp']) + 'k',
-		"pressure": str(list_of_data['main']['pressure']),
-		"humidity": str(list_of_data['main']['humidity']),
+		"location": str(list_of_data['name']) + ', ' + str(list_of_data['sys']['country']),
+		"weather": str(list_of_data['weather'][0]['main']) + ', ' + str(list_of_data['weather'][0]['description']),
+		"coordination": str(list_of_data['coord']['lon']) + ', ' + str(list_of_data['coord']['lat']),
+		"wind_speed": str(list_of_data['wind']['speed']) + ' m/s',
+		"wind_deg": str(list_of_data['wind']['deg']) + ' deg',
+		"visibility": str(list_of_data['visibility']) + ' m',
+		"temperature": str(list_of_data['main']['temp']) + ' K',
+		"feels_like": str(list_of_data['main']['feels_like']) + ' K',
+		"temp_min": str(list_of_data['main']['temp_min']) + ' K',
+		"temp_max": str(list_of_data['main']['temp_max']) + ' K',
+		"pressure": str(list_of_data['main']['pressure']) + ' hPa',
+		"humidity": str(list_of_data['main']['humidity']) + ' %',
+		"base": str(list_of_data['base']),
 	}
-	print(data)
 	return render_template('index.html', data = data)
 
 

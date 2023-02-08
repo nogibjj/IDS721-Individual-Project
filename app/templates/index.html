@@ -33,17 +33,21 @@
         <form>
   </center>
   <div class="row">
-    {% if data.country_code and data.coordinate and data.temp and data.pressure and data.humidity %}
     <div class="col-md-6 col-md-offset-3">
-      <h3>country code : {{data.country_code}}</h1>
-        <h5>City name : {{data.cityname}}</h5>
-        <h5>coordinate : {{data.coordinate}}</h5>
-        <h5>temp (in kelvin) : {{data.temp}}</h5>
-        <h5>temp (in celcius) : {{data.temp_cel}}</h5>
-        <h5>pressure : {{data.pressure}} </h5>
-        <h5>humidity : {{data.humidity}}</h5>
+      <h3>Location: {{data.location}}</h3>
+      <h5>Weather: {{data.weather}}</h5>
+      <h5>Coordination: {{data.coordination}}</h5>
+      <h5>Wind Speed: {{data.wind_speed}}</h5>
+      <h5>Wind Deg: {{data.wind_deg}}</h5>
+      <h5>Visibility: {{data.visibility}}</h5>
+      <h5>Temperature: {{data.temperature}}</h5>
+      <h5>Feels like: {{data.feels_like}}</h5>
+      <h5>Min Temperature: {{data.temp_min}}</h5>
+      <h5>Max Temperature: {{data.temp_max}}</h5>
+      <h5>Pressure: {{data.pressure}}</h5>
+      <h5>Humidity: {{data.humidity}}</h5>
+      <h5>Base: {{data.base}}</h5>
     </div>
-    {% endif %}
   </div>
 </body>
 

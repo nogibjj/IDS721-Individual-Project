@@ -17,3 +17,12 @@ Reference Video(s):
 - Building AI & ML Applications on Google Cloud Platform: https://learning.oreilly.com/videos/building-ai-applications/9780135973462
 
 Reference Source Code: https://github.com/noahgift/gcp-hello-ml
+
+
+Development:
+```bash
+docker build -t ids721-proj1 .   
+docker run --rm -p 80:80 casnz1601/ids721-proj1   
+docker tag ids721-proj1 casnz1601/ids721-proj1     
+docker push casnz1601/ids721-proj1  
+```
