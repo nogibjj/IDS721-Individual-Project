@@ -14,4 +14,8 @@ Reference Architecture Diagram: https://user-images.githubusercontent.com/58792/
 - AWS Cognito (Authentication)
 - AWS S3, CloudFront, Route53 (Content Delivery & Hosting)
 
+
 [![Compare Yourself App](Compare-Yourself-App.png)](Compare-Yourself-App.png)
+
+
+[![Architecture](Architecture.png)](Architecture.png)
