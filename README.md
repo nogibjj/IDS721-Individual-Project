@@ -9,13 +9,14 @@ Reference Reading: https://github.com/noahgift/awslambda
 
 Reference Architecture Diagram: https://user-images.githubusercontent.com/58792/55354483-bae7af80-547a-11e9-9909-a5621251065b.png
 
-- AWS Lambda & AWS API Gateway (Business Logic)
-- DynamoDB (Data Storage)
-- AWS Cognito (Authentication)
-- AWS S3, CloudFront, Route53 (Content Delivery & Hosting)
+- AWS Lambda & AWS API Gateway (Business Logic) & AWS Cloudwatch (Monitoring logs)
 
 
 [![Compare Yourself App](Compare-Yourself-App.png)](Compare-Yourself-App.png)
 
 
 [![Architecture](Architecture.png)](Architecture.png)
+
+
+https://luuopszkbj.execute-api.us-east-1.amazonaws.com/dev
+https://luuopszkbj.execute-api.us-east-1.amazonaws.com/dev/compare-yourself
