@@ -20,3 +20,13 @@ Reference Architecture Diagram: https://user-images.githubusercontent.com/58792/
 
 https://luuopszkbj.execute-api.us-east-1.amazonaws.com/dev
 https://luuopszkbj.execute-api.us-east-1.amazonaws.com/dev/compare-yourself
+
+
+AWS Lambda post data method
+[![cy-post-store-data](cy-post-store-data.png)](cy-post-store-data.png)
+
+AWS Lambda get data method
+[![cy-get-data](cy-get-data.png)](cy-get-data.png)
+    
+AWS Lambda delete data method
+[![cy-delete-data](cy-delete-data.png)](cy-delete-data.png)
