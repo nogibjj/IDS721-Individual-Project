@@ -11,6 +11,17 @@ Reference Architecture Diagram: https://user-images.githubusercontent.com/58792/
 
 - AWS Lambda & AWS API Gateway (Business Logic) & AWS Cloudwatch (Monitoring logs)
 
+```javascript
+// POST
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'https://luuopszkbj.execute-api.us-east-1.amazonaws.com/dev/compare-yourself');
+xhr.onreadystatechange = function (event) {
+  console.log(event.target.response);
+}
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({age: 26, height: 71, income: 2100}));
+```
+
 
 [![Compare Yourself App](Compare-Yourself-App.png)](Compare-Yourself-App.png)
 
@@ -20,6 +31,16 @@ Reference Architecture Diagram: https://user-images.githubusercontent.com/58792/
 
 https://luuopszkbj.execute-api.us-east-1.amazonaws.com/dev
 https://luuopszkbj.execute-api.us-east-1.amazonaws.com/dev/compare-yourself
+
+AWS API Gateway REST API
+[![compare-yourself-Methods](compare-yourself-Methods.png)](compare-yourself-Methods.png)
+
+AWS API Gateway Post method execution
+add POSTMethod-Execution.pn
+[![POSTMethod-Execution](POSTMethod-Execution.png)](POSTMethod-Execution.png)
+
+AWS API Gateway Post method integration request
+[![POST-IntegrationRequest](POST-IntegrationRequest.png)](POST-IntegrationRequest.png)
 
 
 AWS Lambda post data method
